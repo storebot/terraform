@@ -10,3 +10,4 @@ var GitCommit string
 var Version = version.Version
 
 var VersionPrerelease = version.Prerelease
+
