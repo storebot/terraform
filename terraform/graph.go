@@ -26,6 +26,7 @@ func (g *Graph) DirectedGraph() dag.Grapher {
 	return &g.AcyclicGraph
 }
 
+// ICEAL - Debug HERE
 // Walk walks the graph with the given walker for callbacks. The graph
 // will be walked with full parallelism, so the walker should expect
 // to be called in concurrently.
@@ -33,6 +34,7 @@ func (g *Graph) Walk(walker GraphWalker) tfdiags.Diagnostics {
 	return g.walk(walker)
 }
 
+// ICEAL - Debug HERE
 func (g *Graph) walk(walker GraphWalker) tfdiags.Diagnostics {
 	// The callbacks for enter/exiting a graph
 	ctx := walker.EvalContext()
